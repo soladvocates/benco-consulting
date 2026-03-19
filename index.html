@@ -8,6 +8,27 @@
     <script src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
     <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background: #e7dfdb;
+        color: #14213d;
+      }
+
+      a {
+        color: inherit;
+      }
+    </style>
   </head>
 
   <body>
@@ -16,30 +37,1140 @@
     <script type="text/babel">
       const logoSrc = "logo.png";
 
+      const content = {
+        en: {
+          nav: {
+            about: "About",
+            services: "Services",
+            process: "Process",
+            founder: "Founder",
+            contact: "Contact"
+          },
+          toggleEn: "English",
+          toggleEs: "Español",
+          heroBadge: "Confidential Mediation and Strategic Guidance",
+          heroTitle: "Resolve conflict with clarity, discretion and direction.",
+          heroText:
+            "Benco Consulting LLC helps individuals, families and businesses move through conflict with a steady process that reduces friction, protects relationships and supports practical agreements.",
+          heroPanelTitle: "Peaceful agreements, guided with professionalism.",
+          heroPanelText:
+            "Business conflict. Family matters. Personal disputes. Pre-litigation strategy. Structured guidance for moments where clarity matters most.",
+          heroItems: [
+            "Business dispute mediation",
+            "Personal conflict mediation",
+            "Pre-litigation strategy",
+            "Executive guidance"
+          ],
+          ctaPrimary: "Book a Consultation",
+          ctaSecondary: "Call (718) 795-3995",
+          trust: [
+            "Located in New York City",
+            "5.0 Google rating",
+            "Private and client-centered"
+          ],
+          aboutEyebrow: "About Benco",
+          aboutTitle: "A professional mediation practice built for difficult conversations.",
+          aboutText:
+            "Benco Consulting LLC provides mediation and guided conflict-resolution services for clients who need a calm, structured path forward. The firm’s public business description centers on helping people and organizations reach peaceful agreements without the stress, time and cost often associated with going to court.",
+          aboutCards: [
+            {
+              title: "Business disputes",
+              text: "Support for business partners, executives and teams facing tension that could disrupt operations, trust or performance."
+            },
+            {
+              title: "Personal matters",
+              text: "A clear process for sensitive personal conflicts where privacy, understanding and practical next steps matter."
+            },
+            {
+              title: "Pre-litigation strategy",
+              text: "Guidance designed to help clients assess options, reduce escalation and pursue a more constructive resolution path."
+            }
+          ],
+          servicesEyebrow: "Services",
+          servicesTitle: "Focused support across high-stakes situations.",
+          servicesIntro:
+            "The service menu publicly associated with Benco Consulting LLC reflects a practice that combines mediation, strategic guidance and relationship repair.",
+          services: [
+            {
+              title: "Executive Guidance Session",
+              duration: "60 minutes",
+              description:
+                "A private advisory session for leaders navigating conflict, communication breakdowns or high-pressure decisions that affect teams, partnerships or next steps."
+            },
+            {
+              title: "Partnership Realignment",
+              duration: "60 minutes",
+              description:
+                "A structured conversation for business partners who need to repair trust, reset expectations or clarify roles before issues deepen."
+            },
+            {
+              title: "Business Dispute Mediation",
+              duration: "45 minutes, virtual",
+              description:
+                "Targeted support for commercial disagreements, operational friction and disputes where both parties need a practical path toward agreement."
+            },
+            {
+              title: "Personal Conflict Mediation",
+              duration: "45 minutes, virtual",
+              description:
+                "A confidential setting for resolving personal disputes with care, emotional steadiness and clear communication."
+            },
+            {
+              title: "Critical Conflict Mediation",
+              duration: "90 minutes",
+              description:
+                "A deeper session for urgent or complex disputes that require more time, stronger facilitation and a disciplined framework for resolution."
+            },
+            {
+              title: "Pre-Litigation Strategy Session",
+              duration: "60 minutes",
+              description:
+                "An option for clients considering legal action who want to understand where mediation, negotiation or agreement-building may create a better outcome."
+            },
+            {
+              title: "Family Agreement Session",
+              duration: "45 minutes, virtual",
+              description:
+                "Guided conversation for family-related tensions where preserving dignity, reducing stress and reaching workable terms are essential."
+            },
+            {
+              title: "In-Person Focused Resolution Plus",
+              duration: "Available by appointment",
+              description:
+                "An elevated in-person format for matters that benefit from real-time facilitation, deeper engagement and a more controlled environment."
+            }
+          ],
+          processEyebrow: "How It Works",
+          processTitle: "A calm process that keeps resolution in view.",
+          processSteps: [
+            {
+              step: "01",
+              title: "Assess the situation",
+              text: "Every engagement begins with understanding the conflict, the people involved and the practical outcomes that matter most."
+            },
+            {
+              step: "02",
+              title: "Create structure",
+              text: "Benco establishes a professional setting for dialogue so each party can be heard and the conversation can move with purpose."
+            },
+            {
+              step: "03",
+              title: "Facilitate resolution",
+              text: "The process focuses on reducing tension, clarifying issues and guiding participants toward terms they can realistically support."
+            },
+            {
+              step: "04",
+              title: "Move forward",
+              text: "Clients leave with stronger clarity, a better understanding of options and a clearer path toward agreement or next action."
+            }
+          ],
+          founderEyebrow: "Founder",
+          founderTitle: "Ben Cohen",
+          founderRole: "Founder and Lead Mediator",
+          founderText:
+            "Public LinkedIn information identifies Ben Cohen with Benco Consulting LLC and reflects a mission-driven outlook centered on helping people create better outcomes. This website concept positions him as the founder and lead mediator behind a practice focused on thoughtful facilitation, strategic guidance and peaceful resolution.",
+          founderQuote:
+            "The goal is not simply to end conflict. It is to create a path people can actually live with.",
+          contactEyebrow: "Contact",
+          contactTitle: "Start the conversation.",
+          contactText:
+            "For private guidance, mediation support or a first conversation about the right path forward, connect with Benco Consulting LLC.",
+          addressLabel: "Address",
+          addressValue: "555 5th Ave, New York, NY 10017",
+          phoneLabel: "Phone",
+          phoneValue: "(718) 795-3995",
+          hoursLabel: "Hours",
+          hoursValue: "Open daily, closes at 7 PM",
+          socialLabel: "Social",
+          socialValue: "LinkedIn",
+          footerText: "Mediation services for business, family and personal matters."
+        },
+        es: {
+          nav: {
+            about: "Nosotros",
+            services: "Servicios",
+            process: "Proceso",
+            founder: "Fundador",
+            contact: "Contacto"
+          },
+          toggleEn: "English",
+          toggleEs: "Español",
+          heroBadge: "Mediación confidencial y orientación estratégica",
+          heroTitle: "Resuelva conflictos con claridad, discreción y dirección.",
+          heroText:
+            "Benco Consulting LLC ayuda a personas, familias y empresas a avanzar en medio del conflicto con un proceso firme que reduce fricción, protege relaciones y respalda acuerdos prácticos.",
+          heroPanelTitle: "Acuerdos pacíficos guiados con profesionalismo.",
+          heroPanelText:
+            "Conflicto comercial. Asuntos familiares. Disputas personales. Estrategia previa al litigio. Orientación estructurada para momentos en los que la claridad es esencial.",
+          heroItems: [
+            "Mediación de disputas comerciales",
+            "Mediación de conflicto personal",
+            "Estrategia previa al litigio",
+            "Orientación ejecutiva"
+          ],
+          ctaPrimary: "Agendar consulta",
+          ctaSecondary: "Llamar al (718) 795-3995",
+          trust: [
+            "Ubicados en la ciudad de Nueva York",
+            "Calificación 5.0 en Google",
+            "Privado y centrado en el cliente"
+          ],
+          aboutEyebrow: "Sobre Benco",
+          aboutTitle: "Una práctica profesional de mediación para conversaciones difíciles.",
+          aboutText:
+            "Benco Consulting LLC ofrece mediación y servicios guiados de resolución de conflictos para clientes que necesitan una vía tranquila y estructurada. La descripción pública del negocio destaca que ayuda a personas y organizaciones a alcanzar acuerdos pacíficos sin el estrés, el tiempo y el costo que a menudo implica acudir a los tribunales.",
+          aboutCards: [
+            {
+              title: "Disputas comerciales",
+              text: "Apoyo para socios, ejecutivos y equipos que enfrentan tensiones que pueden afectar operaciones, confianza o rendimiento."
+            },
+            {
+              title: "Asuntos personales",
+              text: "Un proceso claro para conflictos personales delicados donde importan la privacidad, la comprensión y los próximos pasos prácticos."
+            },
+            {
+              title: "Estrategia previa al litigio",
+              text: "Orientación diseñada para ayudar a evaluar opciones, reducir la escalada y avanzar hacia una resolución más constructiva."
+            }
+          ],
+          servicesEyebrow: "Servicios",
+          servicesTitle: "Apoyo enfocado para situaciones complejas.",
+          servicesIntro:
+            "El menú de servicios asociado públicamente con Benco Consulting LLC refleja una práctica que combina mediación, orientación estratégica y reparación de relaciones.",
+          services: [
+            {
+              title: "Sesión de orientación ejecutiva",
+              duration: "60 minutos",
+              description:
+                "Una sesión privada para líderes que enfrentan conflicto, fallas de comunicación o decisiones de alta presión que impactan equipos, alianzas o próximos pasos."
+            },
+            {
+              title: "Realineación de alianzas",
+              duration: "60 minutos",
+              description:
+                "Una conversación estructurada para socios comerciales que necesitan reparar confianza, redefinir expectativas o aclarar funciones antes de que el problema crezca."
+            },
+            {
+              title: "Mediación de disputas comerciales",
+              duration: "45 minutos, virtual",
+              description:
+                "Apoyo puntual para desacuerdos comerciales, fricción operativa y disputas donde ambas partes necesitan un camino práctico hacia un acuerdo."
+            },
+            {
+              title: "Mediación de conflicto personal",
+              duration: "45 minutos, virtual",
+              description:
+                "Un espacio confidencial para resolver disputas personales con cuidado, estabilidad emocional y comunicación clara."
+            },
+            {
+              title: "Mediación de conflicto crítico",
+              duration: "90 minutos",
+              description:
+                "Una sesión más profunda para disputas urgentes o complejas que requieren más tiempo, facilitación sólida y un marco disciplinado de resolución."
+            },
+            {
+              title: "Sesión estratégica previa al litigio",
+              duration: "60 minutos",
+              description:
+                "Una opción para clientes que consideran acciones legales y quieren entender dónde la mediación, la negociación o la construcción de acuerdos pueden generar un mejor resultado."
+            },
+            {
+              title: "Sesión de acuerdo familiar",
+              duration: "45 minutos, virtual",
+              description:
+                "Conversación guiada para tensiones familiares donde preservar la dignidad, reducir el estrés y alcanzar términos viables es esencial."
+            },
+            {
+              title: "Focused Resolution Plus presencial",
+              duration: "Disponible con cita",
+              description:
+                "Un formato presencial de nivel superior para asuntos que se benefician de facilitación en tiempo real, mayor profundidad y un entorno más controlado."
+            }
+          ],
+          processEyebrow: "Cómo funciona",
+          processTitle: "Un proceso sereno que mantiene la resolución a la vista.",
+          processSteps: [
+            {
+              step: "01",
+              title: "Evaluar la situación",
+              text: "Cada servicio comienza con una comprensión clara del conflicto, de las personas involucradas y de los resultados prácticos que más importan."
+            },
+            {
+              step: "02",
+              title: "Crear estructura",
+              text: "Benco establece un entorno profesional para el diálogo, para que cada parte sea escuchada y la conversación avance con propósito."
+            },
+            {
+              step: "03",
+              title: "Facilitar la resolución",
+              text: "El proceso se centra en reducir tensión, aclarar los temas y guiar a los participantes hacia términos que realmente puedan sostener."
+            },
+            {
+              step: "04",
+              title: "Avanzar",
+              text: "Los clientes salen con mayor claridad, mejor comprensión de sus opciones y una ruta más definida hacia un acuerdo o una siguiente acción."
+            }
+          ],
+          founderEyebrow: "Fundador",
+          founderTitle: "Ben Cohen",
+          founderRole: "Fundador y mediador principal",
+          founderText:
+            "La información pública de LinkedIn identifica a Ben Cohen con Benco Consulting LLC y refleja una visión impulsada por propósito y por el deseo de ayudar a las personas a lograr mejores resultados. Este concepto de sitio lo presenta como fundador y mediador principal de una práctica enfocada en facilitación reflexiva, orientación estratégica y resolución pacífica.",
+          founderQuote:
+            "La meta no es solo terminar el conflicto. Es crear un camino con el que las personas realmente puedan vivir.",
+          contactEyebrow: "Contacto",
+          contactTitle: "Inicie la conversación.",
+          contactText:
+            "Para orientación privada, apoyo en mediación o una primera conversación sobre el camino adecuado, comuníquese con Benco Consulting LLC.",
+          addressLabel: "Dirección",
+          addressValue: "555 5th Ave, New York, NY 10017",
+          phoneLabel: "Teléfono",
+          phoneValue: "(718) 795-3995",
+          hoursLabel: "Horario",
+          hoursValue: "Abierto todos los días, cierra a las 7 PM",
+          socialLabel: "Red social",
+          socialValue: "LinkedIn",
+          footerText: "Servicios de mediación para asuntos comerciales, familiares y personales."
+        }
+      };
+
+      const palette = {
+        beige: "#e7dfdb",
+        ivory: "#f7f2ee",
+        white: "#ffffff",
+        navy: "#0f4aa2",
+        blue: "#1f5fc0",
+        ink: "#14213d",
+        text: "#41506a",
+        border: "rgba(15,74,162,0.12)"
+      };
+
       function App() {
+        const [lang, setLang] = React.useState("en");
+        const t = content[lang];
+
+        const containerStyle = {
+          width: "100%",
+          maxWidth: "1200px",
+          margin: "0 auto",
+          padding: "0 24px"
+        };
+
+        const cardStyle = {
+          background: "rgba(255,255,255,0.95)",
+          border: `1px solid ${palette.border}`,
+          borderRadius: "24px",
+          boxShadow: "0 18px 45px rgba(20, 33, 61, 0.08)"
+        };
+
         return (
-          <div style={{ fontFamily: "Arial", padding: 40 }}>
-            <img src={logoSrc} style={{ width: 120 }} />
+          <div
+            style={{
+              minHeight: "100vh",
+              background: `linear-gradient(180deg, ${palette.ivory} 0%, ${palette.beige} 100%)`,
+              color: palette.ink
+            }}
+          >
+            <header
+              style={{
+                position: "sticky",
+                top: 0,
+                zIndex: 100,
+                backdropFilter: "blur(12px)",
+                background: "rgba(255,255,255,0.86)",
+                borderBottom: `1px solid ${palette.border}`
+              }}
+            >
+              <div
+                style={{
+                  ...containerStyle,
+                  display: "flex",
+                  justifyContent: "space-between",
+                  alignItems: "center",
+                  gap: "18px",
+                  paddingTop: "18px",
+                  paddingBottom: "18px",
+                  flexWrap: "wrap"
+                }}
+              >
+                <img
+                  src={logoSrc}
+                  alt="Benco Consulting"
+                  style={{ width: "110px", height: "110px", objectFit: "contain", display: "block" }}
+                />
 
-            <h1 style={{ fontSize: 48 }}>
-              Resolve conflict with clarity, discretion and direction.
-            </h1>
+                <div style={{ display: "flex", alignItems: "center", gap: "18px", flexWrap: "wrap" }}>
+                  <a href="#about" style={{ textDecoration: "none", color: palette.text, fontWeight: 700 }}>
+                    {t.nav.about}
+                  </a>
+                  <a href="#services" style={{ textDecoration: "none", color: palette.text, fontWeight: 700 }}>
+                    {t.nav.services}
+                  </a>
+                  <a href="#process" style={{ textDecoration: "none", color: palette.text, fontWeight: 700 }}>
+                    {t.nav.process}
+                  </a>
+                  <a href="#founder" style={{ textDecoration: "none", color: palette.text, fontWeight: 700 }}>
+                    {t.nav.founder}
+                  </a>
+                  <a href="#contact" style={{ textDecoration: "none", color: palette.text, fontWeight: 700 }}>
+                    {t.nav.contact}
+                  </a>
 
-            <p style={{ fontSize: 18, maxWidth: 600 }}>
-              Benco Consulting LLC helps individuals, families and businesses
-              move through conflict with a steady process that reduces friction,
-              protects relationships and supports practical agreements.
-            </p>
+                  <div
+                    style={{
+                      display: "flex",
+                      padding: "4px",
+                      borderRadius: "999px",
+                      background: "rgba(15,74,162,0.08)",
+                      border: `1px solid ${palette.border}`
+                    }}
+                  >
+                    <button
+                      onClick={() => setLang("en")}
+                      style={{
+                        padding: "8px 14px",
+                        borderRadius: "999px",
+                        border: "none",
+                        cursor: "pointer",
+                        fontWeight: 700,
+                        background: lang === "en" ? palette.navy : "transparent",
+                        color: lang === "en" ? "#fff" : palette.navy
+                      }}
+                    >
+                      {t.toggleEn}
+                    </button>
+                    <button
+                      onClick={() => setLang("es")}
+                      style={{
+                        padding: "8px 14px",
+                        borderRadius: "999px",
+                        border: "none",
+                        cursor: "pointer",
+                        fontWeight: 700,
+                        background: lang === "es" ? palette.navy : "transparent",
+                        color: lang === "es" ? "#fff" : palette.navy
+                      }}
+                    >
+                      {t.toggleEs}
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </header>
 
-            <div style={{ marginTop: 30 }}>
-              <button style={{ padding: 12, marginRight: 10 }}>
-                Book a Consultation
-              </button>
+            <section style={{ padding: "52px 0 34px" }}>
+              <div
+                className="hero-grid"
+                style={{
+                  ...containerStyle,
+                  display: "grid",
+                  gridTemplateColumns: "1.15fr 0.85fr",
+                  gap: "28px",
+                  alignItems: "stretch"
+                }}
+              >
+                <div
+                  style={{
+                    ...cardStyle,
+                    padding: "38px",
+                    background: `linear-gradient(180deg, ${palette.white} 0%, ${palette.ivory} 100%)`
+                  }}
+                >
+                  <div
+                    style={{
+                      display: "inline-flex",
+                      padding: "10px 16px",
+                      borderRadius: "999px",
+                      background: "rgba(15,74,162,0.10)",
+                      color: palette.navy,
+                      fontWeight: 700,
+                      fontSize: "13px",
+                      letterSpacing: "0.04em",
+                      textTransform: "uppercase"
+                    }}
+                  >
+                    {t.heroBadge}
+                  </div>
 
-              <button style={{ padding: 12 }}>
-                Call (718) 795-3995
-              </button>
-            </div>
+                  <h1
+                    style={{
+                      fontSize: "clamp(42px, 7vw, 78px)",
+                      lineHeight: 0.95,
+                      marginTop: "22px",
+                      marginBottom: "18px",
+                      color: palette.ink,
+                      maxWidth: "760px"
+                    }}
+                  >
+                    {t.heroTitle}
+                  </h1>
+
+                  <p
+                    style={{
+                      fontSize: "20px",
+                      lineHeight: 1.7,
+                      color: palette.text,
+                      maxWidth: "760px",
+                      margin: 0
+                    }}
+                  >
+                    {t.heroText}
+                  </p>
+
+                  <div style={{ display: "flex", gap: "14px", flexWrap: "wrap", marginTop: "30px" }}>
+                    <a
+                      href="#contact"
+                      style={{
+                        textDecoration: "none",
+                        padding: "15px 22px",
+                        borderRadius: "14px",
+                        background: `linear-gradient(135deg, ${palette.navy} 0%, ${palette.blue} 100%)`,
+                        color: "#fff",
+                        fontWeight: 700,
+                        boxShadow: "0 10px 24px rgba(15,74,162,0.22)"
+                      }}
+                    >
+                      {t.ctaPrimary}
+                    </a>
+                    <a
+                      href="tel:17187953995"
+                      style={{
+                        textDecoration: "none",
+                        padding: "15px 22px",
+                        borderRadius: "14px",
+                        background: "#fff",
+                        color: palette.navy,
+                        fontWeight: 700,
+                        border: `1px solid ${palette.border}`
+                      }}
+                    >
+                      {t.ctaSecondary}
+                    </a>
+                  </div>
+
+                  <div style={{ display: "flex", gap: "12px", flexWrap: "wrap", marginTop: "28px" }}>
+                    {t.trust.map((item) => (
+                      <div
+                        key={item}
+                        style={{
+                          padding: "10px 14px",
+                          borderRadius: "999px",
+                          border: `1px solid ${palette.border}`,
+                          background: "#fff",
+                          color: palette.text,
+                          fontWeight: 700
+                        }}
+                      >
+                        {item}
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
+                <div
+                  style={{
+                    ...cardStyle,
+                    padding: "30px",
+                    background: `linear-gradient(180deg, #8092b5 0%, ${palette.navy} 100%)`,
+                    color: "#fff",
+                    position: "relative",
+                    overflow: "hidden"
+                  }}
+                >
+                  <div
+                    style={{
+                      position: "absolute",
+                      inset: 0,
+                      background:
+                        "radial-gradient(circle at top right, rgba(255,255,255,0.20), transparent 40%), radial-gradient(circle at bottom left, rgba(255,255,255,0.14), transparent 35%)"
+                    }}
+                  ></div>
+
+                  <div style={{ position: "relative" }}>
+                    <img
+                      src={logoSrc}
+                      alt="Benco Consulting"
+                      style={{ width: "128px", height: "128px", objectFit: "contain", display: "block", marginBottom: "18px" }}
+                    />
+
+                    <div
+                      style={{
+                        fontSize: "clamp(34px, 5vw, 56px)",
+                        fontWeight: 800,
+                        lineHeight: 1.05,
+                        marginBottom: "16px"
+                      }}
+                    >
+                      {t.heroPanelTitle}
+                    </div>
+
+                    <div
+                      style={{
+                        fontSize: "18px",
+                        lineHeight: 1.7,
+                        color: "rgba(255,255,255,0.88)"
+                      }}
+                    >
+                      {t.heroPanelText}
+                    </div>
+
+                    <div style={{ display: "grid", gap: "12px", marginTop: "28px" }}>
+                      {t.heroItems.map((item) => (
+                        <div
+                          key={item}
+                          style={{
+                            display: "flex",
+                            alignItems: "center",
+                            gap: "10px",
+                            padding: "14px 16px",
+                            borderRadius: "14px",
+                            background: "rgba(255,255,255,0.12)",
+                            border: "1px solid rgba(255,255,255,0.12)",
+                            fontWeight: 700
+                          }}
+                        >
+                          <span
+                            style={{
+                              width: "8px",
+                              height: "8px",
+                              borderRadius: "999px",
+                              background: "#fff",
+                              display: "inline-block"
+                            }}
+                          ></span>
+                          {item}
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <section id="about" style={{ padding: "18px 0 26px" }}>
+              <div style={containerStyle}>
+                <div style={{ ...cardStyle, padding: "34px" }}>
+                  <div
+                    style={{
+                      fontSize: "13px",
+                      fontWeight: 700,
+                      letterSpacing: "0.12em",
+                      textTransform: "uppercase",
+                      color: palette.navy,
+                      marginBottom: "12px"
+                    }}
+                  >
+                    {t.aboutEyebrow}
+                  </div>
+
+                  <div
+                    className="about-grid"
+                    style={{
+                      display: "grid",
+                      gridTemplateColumns: "1.05fr 0.95fr",
+                      gap: "28px",
+                      alignItems: "start"
+                    }}
+                  >
+                    <div>
+                      <h2
+                        style={{
+                          fontSize: "clamp(30px, 4vw, 48px)",
+                          lineHeight: 1.05,
+                          margin: 0,
+                          color: palette.ink
+                        }}
+                      >
+                        {t.aboutTitle}
+                      </h2>
+
+                      <p
+                        style={{
+                          marginTop: "18px",
+                          fontSize: "17px",
+                          lineHeight: 1.8,
+                          color: palette.text
+                        }}
+                      >
+                        {t.aboutText}
+                      </p>
+                    </div>
+
+                    <div style={{ display: "grid", gap: "16px" }}>
+                      {t.aboutCards.map((card) => (
+                        <div
+                          key={card.title}
+                          style={{
+                            padding: "22px",
+                            borderRadius: "20px",
+                            border: `1px solid ${palette.border}`,
+                            background: palette.ivory
+                          }}
+                        >
+                          <div
+                            style={{
+                              fontWeight: 800,
+                              fontSize: "20px",
+                              color: palette.ink,
+                              marginBottom: "8px"
+                            }}
+                          >
+                            {card.title}
+                          </div>
+                          <div style={{ fontSize: "16px", lineHeight: 1.7, color: palette.text }}>
+                            {card.text}
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <section id="services" style={{ padding: "20px 0 24px" }}>
+              <div style={containerStyle}>
+                <div style={{ textAlign: "center", maxWidth: "860px", margin: "0 auto 26px" }}>
+                  <div
+                    style={{
+                      fontSize: "13px",
+                      fontWeight: 700,
+                      letterSpacing: "0.12em",
+                      textTransform: "uppercase",
+                      color: palette.navy,
+                      marginBottom: "12px"
+                    }}
+                  >
+                    {t.servicesEyebrow}
+                  </div>
+
+                  <h2
+                    style={{
+                      fontSize: "clamp(30px, 4vw, 48px)",
+                      lineHeight: 1.05,
+                      margin: 0,
+                      color: palette.ink
+                    }}
+                  >
+                    {t.servicesTitle}
+                  </h2>
+
+                  <p
+                    style={{
+                      marginTop: "16px",
+                      fontSize: "17px",
+                      lineHeight: 1.8,
+                      color: palette.text
+                    }}
+                  >
+                    {t.servicesIntro}
+                  </p>
+                </div>
+
+                <div
+                  className="services-grid"
+                  style={{
+                    display: "grid",
+                    gridTemplateColumns: "repeat(2, minmax(0, 1fr))",
+                    gap: "18px"
+                  }}
+                >
+                  {t.services.map((service) => (
+                    <div key={service.title} style={{ ...cardStyle, padding: "24px" }}>
+                      <div
+                        style={{
+                          display: "flex",
+                          alignItems: "center",
+                          justifyContent: "space-between",
+                          gap: "16px",
+                          flexWrap: "wrap",
+                          marginBottom: "10px"
+                        }}
+                      >
+                        <div style={{ fontSize: "22px", fontWeight: 800, color: palette.ink }}>
+                          {service.title}
+                        </div>
+                        <div
+                          style={{
+                            padding: "8px 10px",
+                            borderRadius: "999px",
+                            background: "rgba(15,74,162,0.08)",
+                            color: palette.navy,
+                            fontWeight: 700,
+                            fontSize: "13px"
+                          }}
+                        >
+                          {service.duration}
+                        </div>
+                      </div>
+                      <p style={{ fontSize: "16px", lineHeight: 1.7, color: palette.text, margin: 0 }}>
+                        {service.description}
+                      </p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </section>
+
+            <section id="process" style={{ padding: "32px 0 24px" }}>
+              <div style={containerStyle}>
+                <div
+                  style={{
+                    ...cardStyle,
+                    padding: "34px",
+                    background: `linear-gradient(180deg, ${palette.ink} 0%, ${palette.navy} 100%)`,
+                    color: "#fff"
+                  }}
+                >
+                  <div
+                    style={{
+                      fontSize: "13px",
+                      fontWeight: 700,
+                      letterSpacing: "0.12em",
+                      textTransform: "uppercase",
+                      color: "#dce6f8",
+                      marginBottom: "12px"
+                    }}
+                  >
+                    {t.processEyebrow}
+                  </div>
+
+                  <h2
+                    style={{
+                      fontSize: "clamp(30px, 4vw, 48px)",
+                      lineHeight: 1.05,
+                      margin: 0,
+                      color: "#fff"
+                    }}
+                  >
+                    {t.processTitle}
+                  </h2>
+
+                  <div
+                    className="process-grid"
+                    style={{
+                      display: "grid",
+                      gridTemplateColumns: "repeat(4, minmax(0, 1fr))",
+                      gap: "16px",
+                      marginTop: "24px"
+                    }}
+                  >
+                    {t.processSteps.map((item) => (
+                      <div
+                        key={item.step}
+                        style={{
+                          padding: "22px",
+                          borderRadius: "22px",
+                          background: "rgba(255,255,255,0.06)",
+                          border: "1px solid rgba(255,255,255,0.09)"
+                        }}
+                      >
+                        <div
+                          style={{
+                            fontSize: "13px",
+                            fontWeight: 800,
+                            letterSpacing: "0.14em",
+                            opacity: 0.8
+                          }}
+                        >
+                          {item.step}
+                        </div>
+                        <div
+                          style={{
+                            marginTop: "10px",
+                            fontSize: "22px",
+                            fontWeight: 800,
+                            lineHeight: 1.15
+                          }}
+                        >
+                          {item.title}
+                        </div>
+                        <div
+                          style={{
+                            marginTop: "12px",
+                            lineHeight: 1.7,
+                            color: "rgba(255,255,255,0.84)"
+                          }}
+                        >
+                          {item.text}
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <section id="founder" style={{ padding: "24px 0" }}>
+              <div style={containerStyle}>
+                <div style={{ ...cardStyle, padding: "34px" }}>
+                  <div
+                    style={{
+                      fontSize: "13px",
+                      fontWeight: 700,
+                      letterSpacing: "0.12em",
+                      textTransform: "uppercase",
+                      color: palette.navy,
+                      marginBottom: "12px"
+                    }}
+                  >
+                    {t.founderEyebrow}
+                  </div>
+
+                  <div
+                    className="founder-grid"
+                    style={{
+                      display: "grid",
+                      gridTemplateColumns: "300px 1fr",
+                      gap: "28px",
+                      alignItems: "center"
+                    }}
+                  >
+                    <div
+                      style={{
+                        padding: "28px",
+                        borderRadius: "24px",
+                        background: "linear-gradient(180deg, rgba(102,121,154,0.16) 0%, rgba(15,74,162,0.12) 100%)",
+                        border: `1px solid ${palette.border}`
+                      }}
+                    >
+                      <div
+                        style={{
+                          width: "98px",
+                          height: "98px",
+                          borderRadius: "26px",
+                          background: palette.navy,
+                          display: "grid",
+                          placeItems: "center",
+                          color: "#fff",
+                          fontSize: "34px",
+                          fontWeight: 800,
+                          boxShadow: "0 12px 24px rgba(15,74,162,0.22)"
+                        }}
+                      >
+                        BC
+                      </div>
+
+                      <div
+                        style={{
+                          marginTop: "18px",
+                          fontSize: "28px",
+                          fontWeight: 800,
+                          color: palette.ink
+                        }}
+                      >
+                        {t.founderTitle}
+                      </div>
+
+                      <div style={{ marginTop: "10px", color: palette.text, fontWeight: 700 }}>
+                        {t.founderRole}
+                      </div>
+                    </div>
+
+                    <div>
+                      <p style={{ fontSize: "17px", lineHeight: 1.8, color: palette.text }}>
+                        {t.founderText}
+                      </p>
+
+                      <div
+                        style={{
+                          marginTop: "20px",
+                          padding: "20px 22px",
+                          borderRadius: "22px",
+                          background: palette.ivory,
+                          border: `1px solid ${palette.border}`,
+                          fontSize: "24px",
+                          color: palette.ink,
+                          fontWeight: 700,
+                          lineHeight: 1.4
+                        }}
+                      >
+                        “{t.founderQuote}”
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <section id="contact" style={{ padding: "26px 0 64px" }}>
+              <div style={containerStyle}>
+                <div
+                  style={{
+                    ...cardStyle,
+                    padding: "34px",
+                    background: `linear-gradient(180deg, #ffffff 0%, ${palette.ivory} 100%)`
+                  }}
+                >
+                  <div
+                    style={{
+                      fontSize: "13px",
+                      fontWeight: 700,
+                      letterSpacing: "0.12em",
+                      textTransform: "uppercase",
+                      color: palette.navy,
+                      marginBottom: "12px"
+                    }}
+                  >
+                    {t.contactEyebrow}
+                  </div>
+
+                  <div
+                    className="contact-grid"
+                    style={{
+                      display: "grid",
+                      gridTemplateColumns: "1.1fr 0.9fr",
+                      gap: "24px",
+                      alignItems: "start"
+                    }}
+                  >
+                    <div>
+                      <h2
+                        style={{
+                          fontSize: "clamp(30px, 4vw, 48px)",
+                          lineHeight: 1.05,
+                          margin: 0,
+                          color: palette.ink
+                        }}
+                      >
+                        {t.contactTitle}
+                      </h2>
+
+                      <p
+                        style={{
+                          marginTop: "16px",
+                          maxWidth: "680px",
+                          fontSize: "17px",
+                          lineHeight: 1.8,
+                          color: palette.text
+                        }}
+                      >
+                        {t.contactText}
+                      </p>
+
+                      <div style={{ display: "flex", gap: "14px", flexWrap: "wrap", marginTop: "24px" }}>
+                        <a
+                          href="tel:17187953995"
+                          style={{
+                            textDecoration: "none",
+                            padding: "15px 22px",
+                            borderRadius: "14px",
+                            background: `linear-gradient(135deg, ${palette.navy} 0%, ${palette.blue} 100%)`,
+                            color: "#fff",
+                            fontWeight: 700,
+                            boxShadow: "0 10px 24px rgba(15,74,162,0.22)"
+                          }}
+                        >
+                          {t.ctaSecondary}
+                        </a>
+
+                        <a
+                          href="https://www.linkedin.com/company/benco-consulting/"
+                          target="_blank"
+                          rel="noreferrer"
+                          style={{
+                            textDecoration: "none",
+                            padding: "15px 22px",
+                            borderRadius: "14px",
+                            background: "#fff",
+                            color: palette.navy,
+                            fontWeight: 700,
+                            border: `1px solid ${palette.border}`
+                          }}
+                        >
+                          {t.socialValue}
+                        </a>
+                      </div>
+                    </div>
+
+                    <div style={{ display: "grid", gap: "14px" }}>
+                      {[
+                        [t.addressLabel, t.addressValue],
+                        [t.phoneLabel, t.phoneValue],
+                        [t.hoursLabel, t.hoursValue],
+                        [t.socialLabel, t.socialValue]
+                      ].map(([label, value]) => (
+                        <div
+                          key={label}
+                          style={{
+                            padding: "18px",
+                            borderRadius: "18px",
+                            background: "#fff",
+                            border: `1px solid ${palette.border}`
+                          }}
+                        >
+                          <div
+                            style={{
+                              fontSize: "12px",
+                              fontWeight: 800,
+                              letterSpacing: "0.12em",
+                              textTransform: "uppercase",
+                              color: "#66799a",
+                              marginBottom: "6px"
+                            }}
+                          >
+                            {label}
+                          </div>
+                          <div style={{ fontSize: "18px", color: palette.ink, fontWeight: 700 }}>
+                            {value}
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <footer
+              style={{
+                borderTop: `1px solid ${palette.border}`,
+                background: "rgba(255,255,255,0.78)"
+              }}
+            >
+              <div
+                style={{
+                  ...containerStyle,
+                  paddingTop: "24px",
+                  paddingBottom: "30px",
+                  display: "flex",
+                  justifyContent: "space-between",
+                  gap: "18px",
+                  flexWrap: "wrap"
+                }}
+              >
+                <div>
+                  <div style={{ fontWeight: 800, color: palette.ink }}>BENCO CONSULTING LLC</div>
+                  <div style={{ color: palette.text, marginTop: "6px" }}>{t.footerText}</div>
+                </div>
+
+                <div style={{ maxWidth: "520px", color: "#66799a", fontSize: "14px", lineHeight: 1.6 }}>
+                  Website concept prepared from publicly visible business listing details, product names and limited public profile information.
+                </div>
+              </div>
+            </footer>
+
+            <style>{`
+              @media (max-width: 980px) {
+                .hero-grid,
+                .about-grid,
+                .founder-grid,
+                .contact-grid {
+                  grid-template-columns: 1fr !important;
+                }
+
+                .process-grid {
+                  grid-template-columns: 1fr 1fr !important;
+                }
+              }
+
+              @media (max-width: 720px) {
+                .services-grid,
+                .process-grid {
+                  grid-template-columns: 1fr !important;
+                }
+              }
+            `}</style>
           </div>
         );
       }
