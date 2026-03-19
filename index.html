@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Benco Consulting</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  </head>
+
+  <body>
+    <div id="root"></div>
+
+    <script type="text/babel">
+      const logoSrc = "logo.png";
+
+      function App() {
+        return (
+          <div style={{ fontFamily: "Arial", padding: 40 }}>
+            <img src={logoSrc} style={{ width: 120 }} />
+
+            <h1 style={{ fontSize: 48 }}>
+              Resolve conflict with clarity, discretion and direction.
+            </h1>
+
+            <p style={{ fontSize: 18, maxWidth: 600 }}>
+              Benco Consulting LLC helps individuals, families and businesses
+              move through conflict with a steady process that reduces friction,
+              protects relationships and supports practical agreements.
+            </p>
+
+            <div style={{ marginTop: 30 }}>
+              <button style={{ padding: 12, marginRight: 10 }}>
+                Book a Consultation
+              </button>
+
+              <button style={{ padding: 12 }}>
+                Call (718) 795-3995
+              </button>
+            </div>
+          </div>
+        );
+      }
+
+      const root = ReactDOM.createRoot(document.getElementById("root"));
+      root.render(<App />);
+    </script>
+  </body>
+</html>
